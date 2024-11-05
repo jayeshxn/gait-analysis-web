@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}Upload Data{% endblock %}
+{% block content %}
+<div class="form-div">
+  <h2>Upload New Data</h2>
+  <form method="POST" enctype="multipart/form-data">
+    {{ form.hidden_tag() }}
+
+    <div class="form-group">
+      {{ form.tag.label }}<br />
+      {{ form.tag(class_="form-input") }}
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        {{ form.data.label }}
+        {{ form.data(class_="form-input") }}
+      </div>
+      <div class="form-group">
+        {{ form.data_type.label }}
+        {{ form.data_type(class_="form-input") }}
+      </div>
+    </div>
+
+    <div class="form-group">
+      {{ form.metadata.label }}<br />
+      {{ form.metadata(class_="form-input") }}
+    </div>
+
+    <div>
+      {{ form.submit(class_="button-primary") }}
+    </div>
+  </form>
+</div>
+{% endblock %}

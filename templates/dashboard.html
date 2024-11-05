@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+<div class="dash-container">
+    <h2>Your Datasets</h2>
+    {% if uploads %}
+        <table>
+            <thead>
+                <tr>
+                    <th>Tag</th>
+                    <th>Data Type</th>
+                    <th>Upload Time</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for upload in uploads %}
+                <tr>
+                    <td>{{ upload.tag }}</td>
+                    <td>{{ upload.data_type }}</td>
+                    <td>{{ upload.upload_time.strftime('%Y-%m-%d %H:%M:%S') }}</td>
+                    <td><a href="{{ url_for('analysis', data_id=upload.id) }}"><button>View Analysis</button></a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>No datasets uploaded yet</p>
+    {% endif %}
+    
+    <a href="{{ url_for('upload') }}">
+        <button>
+            Upload a dataset
+        </button>
+    </a>
+</div>
+{% endblock %}

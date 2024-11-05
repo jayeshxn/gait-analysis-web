@@ -1,0 +1,63 @@
+<!-- templates/register.html
+{% extends "base.html" %} {% block title %}Register{% endblock %} {% block
+content %} -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body class="register-body">
+<div class="register-container">
+  <h2>Register</h2>
+  <form method="POST">
+    {{ form.hidden_tag() }}
+    <div class="form-onerow">
+      <div class="form-group">
+        {{ form.username.label }} {{ form.username(class_="form-input") }}
+      </div>
+
+      <div class="form-group">
+        {{ form.password.label }} {{ form.password(class_="form-input") }}
+      </div>
+
+      <div class="form-group">
+        {{ form.confirm_password.label }} {{
+        form.confirm_password(class_="form-input") }}
+      </div>
+    </div>
+    <div class="form-onerow">
+      <div class="form-group">
+        {{ form.date_of_birth.label }} {{
+        form.date_of_birth(class_="form-input") }}
+      </div>
+
+      <div class="form-group">
+        {{ form.gender.label }} {{ form.gender(class_="form-input") }}
+      </div>
+
+      <div class="form-group">
+        {{ form.height.label }} {{ form.height(class_="form-input") }}
+      </div>
+
+      <div class="form-group">
+        {{ form.weight.label }} {{ form.weight(class_="form-input") }}
+      </div>
+    </div>
+      <div class="form-group">
+        {{ form.gait_disorder.label }} {{
+        form.gait_disorder(class_="form-input") }}
+      </div>
+
+      <div class="form-group">{{ form.submit(class_="button-primary") }}</div>
+      <p>
+        Already have an account?
+        <a href="{{ url_for('login') }}">Login here</a>.
+      </p>
+  </form>
+</div>
+<!-- 
+{% endblock %} -->
+</body>
+</html>

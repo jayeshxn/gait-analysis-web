@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}Dataset Analysis{% endblock %}
+{% block content %}
+<div class="analysis-div">
+    <h2>Dataset Analysis</h2>
+    <p><strong>Tag:</strong> {{ dataset.tag }}</p>
+    <p><strong>Dataset Type:</strong> {{ dataset.data_type }}</p>
+    <p><strong>Upload Time:</strong> {{ dataset.upload_time.strftime('%Y-%m-%d %H:%M') }}</p>
+    {% if dataset.metadata is string %}
+        <p><strong>Metadata:</strong> {{ dataset.metadata }}</p>
+    {% else %}
+        <p><strong>Metadata:</strong> No metadata provided</p>
+    {% endif %}
+
+    <!-- Placeholder for data analysis visualization -->
+    <div class="analysis">
+        <p>Here analysis and visualization for the dataset will be implemented</p>
+    </div>
+    <br>
+    <a href="{{ url_for('dashboard') }}">
+        <button class="button-primary">Back to Dashboard</button>
+    </a>
+</div>
+{% endblock %}

@@ -1,0 +1,710 @@
+/* static/css/styles.css */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.form-onerow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.register-body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.register-container {
+  margin: auto;
+  width: 800px;
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.05); /* Light, semi-transparent background */
+  backdrop-filter: blur(15px); /* Glassmorphic effect */
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* More pronounced shadow for contrast */
+  text-align: center;
+  color: #333; /* Dark text for readability */
+}
+
+.register-container h2 {
+  margin-bottom: 20px;
+  font-size: 1.8em;
+  color: #333; /* Darker heading color */
+}
+
+.register-container .form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.register-container .form-group label {
+  font-weight: 600;
+  margin-bottom: 5px;
+  display: block;
+  color: #666; /* Medium gray for label */
+}
+
+.register-container .form-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.9); /* Slightly opaque for contrast */
+  color: #333;
+  font-size: 1em;
+  outline: none;
+  transition: background 0.3s ease;
+}
+
+.register-container .form-input:focus {
+  background: rgba(255, 255, 255, 1); /* Fully opaque on focus */
+}
+
+.register-container .button-primary {
+  width: 100%;
+  padding: 10px;
+  background: #333; /* Dark button for contrast */
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.register-container .button-primary:hover {
+  background: #555; /* Slightly lighter on hover */
+}
+
+.register-container p {
+  margin-top: 20px;
+  color: #666;
+}
+
+.register-container a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.register-container a:hover {
+  color: #555;
+}
+
+.login-container {
+  margin: 25px auto;
+  width: 320px;
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.05); /* Light, semi-transparent background */
+  backdrop-filter: blur(15px); /* Glassmorphic effect */
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* More pronounced shadow for contrast */
+  text-align: center;
+  color: #333; /* Dark text for readability */
+}
+
+.login-container h2 {
+  margin-bottom: 20px;
+  font-size: 1.8em;
+  color: #333; /* Darker heading color */
+}
+
+.login-container .form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.login-container .form-group label {
+  font-weight: 600;
+  margin-bottom: 5px;
+  display: block;
+  color: #666; /* Medium gray for label */
+}
+
+.login-container .form-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.9); /* Slightly opaque for contrast */
+  color: #333;
+  font-size: 1em;
+  outline: none;
+  transition: background 0.3s ease;
+}
+
+.login-container .form-input:focus {
+  background: rgba(255, 255, 255, 1); /* Fully opaque on focus */
+}
+
+.login-container .button-primary {
+  width: 100%;
+  padding: 10px;
+  background: #333; /* Dark button for contrast */
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.login-container .button-primary:hover {
+  background: #555; /* Slightly lighter on hover */
+}
+
+.login-container p {
+  margin-top: 20px;
+  color: #666;
+}
+
+.login-container a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.login-container a:hover {
+  color: #555;
+}
+
+/* Styling for the upload page */
+.form-div {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  color: #333;
+  text-align: center;
+}
+
+.form-div h2 {
+  margin-bottom: 20px;
+  font-size: 1.8em;
+  color: #333;
+}
+
+/* Form Group Styling */
+.form-div .form-group {
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.form-div .form-group label {
+  font-weight: 600;
+  color: #666;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Row styling to align fields in one line */
+.form-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.form-row .form-group {
+  flex: 1; /* Distribute space equally */
+}
+
+/* Form Input Styling */
+.form-div .form-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.9);
+  font-size: 1em;
+  color: #333;
+  outline: none;
+  transition: background 0.3s ease;
+}
+
+.form-div .form-input:focus {
+  background: rgba(255, 255, 255, 1);
+}
+
+/* Button Styling */
+.form-div .button-primary {
+  width: 100%;
+  padding: 10px;
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.form-div .button-primary:hover {
+  background: #555;
+}
+
+
+
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+nav {
+  width: fit-content;
+  margin: auto;
+  display: flex;
+  gap: 20px; /* Space between <a> elements */
+  padding: 15px 30px;
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  border-radius: 20px; /* Curvy edges */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+nav a {
+  color: #1565c0; /* Text color */
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 10px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+  color: #1976d2; /* Optional accent color on hover */
+}
+
+input[type="text"],
+input[type="file"],
+input[type="date"]
+select,
+input[type="password"] {
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 100%;
+  font-size: 14px;
+
+  &:focus {
+    outline: none;
+    border-color: #1976d2;
+    box-shadow: 0 0 0 2px rgba(25, 118, 210, 0.2);
+  }
+}
+
+input::file-selector-button {
+  padding: 8px;
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.8em;
+  cursor: pointer;
+  transition: background 0.3s ease;
+
+  &:hover {
+    background-color: #555;
+  }
+
+  &:active {
+    background-color: #555;
+  }
+}
+
+.button_primary {
+  background-color: #1976d2;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  font-size: 14px;
+  &:hover {
+    background-color: #1565c0;
+  }
+
+  &:active {
+    background-color: #1154aa;
+  }
+}
+
+table {
+  padding: 10px;
+  width: 90%;
+  max-width: 850px;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  border-radius: 15px; /* Curved edges */
+  overflow: hidden;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+thead {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+th, td {
+  padding: 15px;
+  text-align: left;
+}
+
+th {
+  font-weight: 700;
+  font-size: 1.1em;
+}
+
+tbody tr {
+  transition: background 0.3s ease;
+  align-items: center;
+  justify-content: center;
+
+}
+
+tbody tr:hover {
+  background: rgba(255, 255, 255, 0.1); /* Highlight row on hover */
+}
+
+td:last-child {
+  display: flex;
+  justify-content: flex-start;
+  gap: 5px; /* Space between buttons */
+}
+
+.dash-container {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.05); /* Light glass-like background */
+  backdrop-filter: blur(10px); /* Glassmorphic effect */
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow for separation */
+  color: #333; /* Dark text color */
+}
+
+.dash-container h2 {
+  text-align: center;
+  font-size: 1.8em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Table Styling */
+.dash-container table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  background: rgba(255, 255, 255, 0.8); /* Slightly opaque for readability */
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.dash-container th,
+.dash-container td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.dash-container th {
+  background-color: rgba(0, 0, 0, 0.03);
+  font-weight: bold;
+  color: #333;
+}
+
+.dash-container tr:hover {
+  background-color: rgba(0, 0, 0, 0.03); /* Highlight row on hover */
+}
+
+/* Button Styling */
+.dash-container button {
+  padding: 10px 20px;
+  background: #333; /* Dark button for contrast */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-weight: bold;
+}
+
+.dash-container button:hover {
+  background: #555;
+}
+
+.dash-container p {
+  text-align: center;
+  color: #666;
+  font-size: 1em;
+  margin-top: 15px;
+}
+
+/* Link styling for buttons inside <a> tags */
+.dash-container a button {
+  width: 100%;
+  text-align: center;
+}
+
+
+button {
+  font-size: 14px;
+  background-color: #1976d2;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+
+  &:hover {
+    background-color: #1565c0;
+  }
+
+  &:active {
+    background-color: #1154aa;
+  }
+}
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: #007bff;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background: #e9ecef;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+
+.navbar {
+  width: fit-content;
+  padding: 15px 30px;
+  background: rgba(0, 0, 0, 0.05); /* Light, glass-like background */
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  border-radius: 0 0 15px 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  padding: 10px 15px;
+}
+
+.navbar a:hover {
+  color: #555;
+}
+
+/* Content styling */
+.content {
+  padding: 20px;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+/* Flash messages */
+.flash {
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+}
+
+.flash.success {
+  background-color: #4CAF50; /* Success green */
+}
+
+.flash.error {
+  background-color: #F44336; /* Error red */
+}
+
+.flash.warning {
+  background-color: #FF9800; /* Warning orange */
+}
+
+.analysis-div {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.05); /* Glassy background */
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  color: #333;
+  text-align: left;
+}
+
+.analysis-div h2 {
+  margin-bottom: 20px;
+  font-size: 1.8em;
+  color: #333;
+}
+
+.analysis-div p {
+  margin: 10px 0; /* Add some spacing between paragraphs */
+  line-height: 1.6; /* Improve readability */
+}
+
+/* Placeholder for analysis section */
+.analysis {
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.8); /* Light background for analysis */
+}
+.analysis-div .button-primary {
+  width: 100%;
+  padding: 10px;
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.analysis-div .button-primary:hover {
+  background: #555;
+}
+
+.analysis-div .button-primary:active {
+  background-color: #666; /* Even darker blue when active */
+}
+
+/* Home page styles with scoped classes */
+.home-container {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.home-container header {
+  margin-bottom: 40px;
+}
+
+.home-container header h1 {
+  font-size: 2.5em;
+  color: #333;
+}
+
+.home-container header p {
+  font-size: 1.2em;
+  color: #666;
+}
+
+.home-container .features, 
+.home-container .about {
+  margin: 40px 0;
+}
+
+.home-container .features h2, 
+.home-container .about h2 {
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.home-container .feature-item {
+  margin-bottom: 30px;
+  background: rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.home-container .feature-item h3 {
+  color: #1976d2;
+}
+
+footer {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #1976d2;
+  color: white;
+  text-align: center;
+}
+
+footer .footer-content p {
+  margin: 5px 0;
+}
+
+footer .footer-content a {
+  color: white;
+  text-decoration: underline;
+}
+
+.head-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.button-primary {
+  width: 100%;
+  padding: 10px;
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+a {
+  text-decoration: none;
+}
+
+.button-primary:hover {
+  background: #555;
+}
+
+ .button-primary:active {
+  background-color: #666; /* Even darker blue when active */
+}
